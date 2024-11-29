@@ -1,4 +1,10 @@
 {
+	"name": "chain_game",
+	"private": true,
+	"version": "1.0.0",
+	"scripts": {
+		"deploy": "npx gh-pages -d ."
+	},
 	"dependencies": {
 		"gh-pages": "^6.2.0"
 	}
