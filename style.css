@@ -1,7 +1,12 @@
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  padding-top: 60px;
 }
 
 * {
@@ -12,14 +17,8 @@ html, body {
 }
 
 img {
-  max-width: 100%; /* 防止图片超出容器 */
+  max-width: 100%;
   height: auto;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
 }
 
 .navbar {
@@ -43,8 +42,6 @@ img {
   height: 40px;
 }
 
-
-
 .nav-logo {
   width: 100%;
   height: 100%;
@@ -54,7 +51,6 @@ img {
 .carousel {
   position: relative;
   width: 100%;
-  height: 200px;
   overflow: hidden;
 }
 
@@ -67,7 +63,6 @@ img {
 
 .carousel-item {
   min-width: 100%;
-  height: 100%;
 }
 
 .carousel-item img {
@@ -164,13 +159,21 @@ img {
 }
 
 @keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-600px); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-600px);
+  }
 }
 
 @keyframes scrollRight {
-  0% { transform: translateX(-600px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .scroll-left .nft-container {
@@ -239,17 +242,17 @@ img {
   .footer-content {
     flex-direction: column;
   }
-  
+
   .footer-column {
     width: 100%;
   }
 }
 
-.flex2{
+.flex2 {
   flex: 2;
 }
 
-.flex1{
+.flex1 {
   flex: 1;
 }
 
@@ -325,16 +328,12 @@ img {
 }
 
 .menu-button {
-  background-color: #F4A460;
+  background-color: #f4a460;
   color: white;
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 25px;
   font-weight: bold;
-}
-
-body {
-  padding-top: 60px;
 }
 
 .menu-container .nav-brand {
@@ -346,4 +345,8 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+}
+
+.right {
+  font-size: 12px;
 }
