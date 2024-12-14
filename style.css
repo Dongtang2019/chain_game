@@ -92,22 +92,6 @@ img {
   right: 1rem;
 }
 
-@media (max-width: 768px) {
-  .carousel {
-    height: 200px;
-  }
-
-  .carousel-prev,
-  .carousel-next {
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-
-  .nav-logo {
-    height: 40px;
-  }
-}
-
 .content-block {
   background-image: url('assets/loading_6.jpg');
   background-size: cover;
@@ -136,6 +120,7 @@ img {
 }
 
 .nft-section h3 {
+  font-size: 22px;
   text-align: center;
   color: #744c74;
   margin-bottom: 40px;
@@ -156,24 +141,6 @@ img {
   height: 160px;
   object-fit: cover;
   border-radius: 12px;
-}
-
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-600px);
-  }
-}
-
-@keyframes scrollRight {
-  0% {
-    transform: translateX(-600px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 .scroll-left .nft-container {
@@ -236,16 +203,6 @@ img {
 
 .footer-section a:hover {
   text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-  }
-
-  .footer-column {
-    width: 100%;
-  }
 }
 
 .flex2 {
@@ -349,4 +306,48 @@ img {
 
 .right {
   font-size: 12px;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-600px);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 200px;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .nav-logo {
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
 }
