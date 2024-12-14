@@ -2,7 +2,7 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
@@ -93,7 +93,7 @@ img {
 }
 
 .content-block {
-  background-image: url('assets/loading_6.jpg');
+  background-image: url("assets/loading_6.jpg");
   background-size: cover;
   background-position: center;
   padding: 40px;
@@ -170,8 +170,8 @@ img {
 }
 
 .footer-content {
-  max-width: 800px;
-  margin: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -180,6 +180,7 @@ img {
   flex: 1;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .footer-section {
