@@ -1,7 +1,24 @@
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%; /* 防止图片超出容器 */
+  height: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .navbar {
@@ -11,6 +28,13 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .nav-brand {
@@ -36,6 +60,7 @@
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
+  width: 100%;
   height: 100%;
 }
 
@@ -225,4 +250,98 @@
 
 .flex1{
   flex: 1;
+}
+
+.menu-icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.menu-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(101, 138, 219);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  padding: 0;
+}
+
+.menu-container.active {
+  display: flex;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+
+.close-icon {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.close-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-content {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.menu-button {
+  background-color: #F4A460;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+body {
+  padding-top: 60px;
+}
+
+.menu-container .nav-brand {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-container .nav-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }

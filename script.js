@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.carousel-item');
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+  const menuContainer = document.querySelector('.menu-container');
   
   let currentIndex = 0;
   const totalItems = items.length;
@@ -35,5 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(autoplay);
     prevSlide();
     autoplay = setInterval(nextSlide, 3000);
+  });
+  
+  menuIcon.addEventListener('click', function() {
+    menuContainer.classList.add('active');
+  });
+  
+  closeIcon.addEventListener('click', function() {
+    menuContainer.classList.remove('active');
   });
 }); 
