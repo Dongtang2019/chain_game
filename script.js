@@ -1,50 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const carousel = document.querySelector('.carousel-inner');
-  const items = document.querySelectorAll('.carousel-item');
+  const container = document.querySelector('.carousel-container');
   const prevBtn = document.querySelector('.carousel-prev');
   const nextBtn = document.querySelector('.carousel-next');
-  const menuIcon = document.querySelector('.menu-icon');
-  const closeIcon = document.querySelector('.close-icon');
-  const menuContainer = document.querySelector('.menu-container');
+  const items = document.querySelectorAll('.carousel-item');
   
   let currentIndex = 0;
   const totalItems = items.length;
   
-  function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
+  // 更新按钮状态
+  const updateButtons = () => {
+    prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+    nextBtn.style.opacity = currentIndex === totalItems - 1 ? '0.5' : '1';
+  };
   
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalItems;
-    updateCarousel();
-  }
+  // 初始化按钮状态
+  updateButtons();
   
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    updateCarousel();
-  }
+  // 切换到指定索引
+  const goToSlide = (index) => {
+    currentIndex = index;
+    const translateX = -106 * currentIndex;
+    container.style.transform = `translateX(${translateX}%)`;
+    updateButtons();
+  };
   
-  // 自动轮播
-  let autoplay = setInterval(nextSlide, 3000);
-  
-  // 按钮点击事件
-  nextBtn.addEventListener('click', () => {
-    clearInterval(autoplay);
-    nextSlide();
-    autoplay = setInterval(nextSlide, 3000);
-  });
-  
+  // 上一张
   prevBtn.addEventListener('click', () => {
-    clearInterval(autoplay);
-    prevSlide();
-    autoplay = setInterval(nextSlide, 3000);
+    if (currentIndex > 0) {
+      goToSlide(currentIndex - 1);
+    }
   });
   
-  menuIcon.addEventListener('click', function() {
-    menuContainer.classList.add('active');
+  // 下一张
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalItems - 1) {
+      goToSlide(currentIndex + 1);
+    }
   });
-  
-  closeIcon.addEventListener('click', function() {
-    menuContainer.classList.remove('active');
-  });
-}); 
+});
