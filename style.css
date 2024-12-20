@@ -38,31 +38,16 @@
   height: 100%;
 }
 
-.carousel-item {
+.carousel-item,
+.carousel-item-2 {
   min-width: 100%;
 }
 
-.carousel-item img {
+.carousel-item img,
+.carousel-item-2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.carousel-prev,
-.carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.carousel-prev {
-  left: 1rem;
 }
 
 .carousel-next {
@@ -345,7 +330,7 @@
   min-width: 100%;
   min-height: 100%;
   width: 100%;
-  z-index:0;
+  z-index: 0;
   object-fit: cover;
 }
 
@@ -380,7 +365,7 @@
   text-transform: uppercase;
   font-family: Spiegel, sans-serif;
   outline: rgb(255, 255, 255) solid 1px;
-    outline-offset: 3px;
+  outline-offset: 3px;
 }
 
 .play-button:hover {
@@ -392,20 +377,20 @@
   .hero-content {
     padding: 20px;
   }
-  
+
   .game-logo {
     max-width: 300px;
   }
-  
+
   .play-button {
     padding: 12px 30px;
     font-size: 16px;
   }
 }
 
-.featured-section {
-  padding: 20px 20px 60px 20px;
-  /* background: #fff; */
+.featured-section,
+.roadmap-section {
+  padding: 20px 0px 60px 0px;
   background-image: url("assets/featured_bg.png");
   background-size: cover;
   background-position: center;
@@ -418,6 +403,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .featured-header h2 {
@@ -437,20 +423,24 @@
   gap: 8px;
 }
 
-.featured-carousel {
+.featured-carousel,
+.roadmap-carousel {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
 }
 
-.carousel-container {
+.carousel-container,
+.carousel-container-2 {
   display: flex;
   transition: transform 0.5s ease;
+  width: 100%;
 }
 
-.carousel-item {
+.carousel-item,
+.carousel-item-2 {
   min-width: 100%;
-  margin-right: 20px;
+  padding: 0 20px;
 }
 
 .news-card {
@@ -477,38 +467,59 @@
   font-size: 12px;
 }
 
+.progress-bar {
+  height: 2px;
+  width: 70%;
+  position: relative;
+  background-color: rgb(188, 188, 188);
+}
+
+.progress-bar-fill,
+.progress-bar-fill-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
 .carousel-controls {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   position: absolute;
-  bottom: -60px;
-  left: 90%;
   bottom: -30px;
-  /* transform: translateX(0%); */
-  /* gap: 20px; */
+  right: 0;
+  width: 100%;
+  gap: 40px;
+  padding-left: 20px;
+}
+
+.carousel-controls-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  flex: 1;
 }
 
 .carousel-prev,
-.carousel-next {
+.carousel-next,
+.carousel-prev-2,
+.carousel-next-2 {
   background: none;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: all 0.3s ease;
   padding: 0;
-}
-
-.carousel-prev img,
-.carousel-next img {
-  width: 24px;
-  height: 24px;
+  opacity: 0.6;
 }
 
 .carousel-prev:hover,
-.carousel-next:hover {
-  background:none;
-  color: white;
+.carousel-next:hover,
+.carousel-prev-2:hover,
+.carousel-next-2:hover {
+  opacity: 1;
 }
