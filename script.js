@@ -101,4 +101,26 @@ document.addEventListener('DOMContentLoaded', () => {
   closeIcon.addEventListener('click', function () {
     menuContainer.classList.remove('active');
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const icons = document.querySelectorAll('.icon-item');
+  const video = document.getElementById('mediaVideo');
+
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      // 移除所有active类
+      icons.forEach(i => i.classList.remove('active'));
+
+      // 添加active类到当前点击的图标
+      icon.classList.add('active');
+
+      // 更新视频源
+      const videoSrc = icon.getAttribute('data-video');
+      console.log(videoSrc);
+      video.src = `assets/circle/${videoSrc}`;
+      video.load();
+      video.play();
+    });
+  });
 }); 
