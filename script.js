@@ -123,4 +123,23 @@ document.addEventListener('DOMContentLoaded', () => {
       video.play();
     });
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tab');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // 移除所有active类
+      tabs.forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.role').forEach(role => role.classList.remove('active'));
+
+      // 添加active类到当前选中的tab
+      tab.classList.add('active');
+
+      // 显示对应的角色
+      const roleId = tab.getAttribute('data-role');
+      document.getElementById(roleId).classList.add('active');
+    });
+  });
 }); 
