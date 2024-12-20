@@ -7,6 +7,10 @@
   <title>Hunter Fight</title>
   <link rel="stylesheet" href="root.css">
   <link rel="stylesheet" href="style.css">
+  <script>
+    const video = document.querySelector('.background-video');
+    video.play();
+  </script>
 </head>
 
 <body>
@@ -19,7 +23,7 @@
     </div>
   </nav>
 
-  <!-- 添加菜单容器 -->
+  <!--菜单-->
   <div class="menu-container">
     <div class="menu-header">
       <div class="nav-brand">
@@ -38,16 +42,20 @@
     </div>
   </div>
 
+  <!--背景-->
   <div class="hero-section">
-    <video class="background-video" autoplay loop muted playsinline>
+    <video class="background-video" autoplay loop muted playsinline webkit-playsinline>
       <source src="./assets/bg.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
-      <!-- <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/9eb028de391e65072d06e77f06d0955f66b9fa2c-736x316.png?auto=format&fit=fill&q=80&w=600" alt="Game Logo" class="game-logo"> -->
+      <img
+        src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/9eb028de391e65072d06e77f06d0955f66b9fa2c-736x316.png?auto=format&fit=fill&q=80&w=600"
+        alt="Game Logo" class="game-logo">
       <a href="#" class="play-button">PLAY FOR FREE</a>
     </div>
   </div>
 
+  <!-- 推荐 -->
   <div class="featured-section">
     <div class="featured-header">
       <h2>FEATURED</h2>
@@ -91,15 +99,16 @@
     </div>
   </div>
 
+  <!-- 路线图 -->
   <div class="roadmap-section">
     <div class="featured-header">
-      <h2>FEATURED</h2>
+      <h2>ROADMAP</h2>
     </div>
     <div class="featured-carousel">
       <div class="carousel-container-2">
         <div class="carousel-item-2">
           <div class="news-card">
-            <img src="assets/npc_1.jpg" alt="npc_1">
+            <img src="assets/npc_3.jpg" alt="npc_1">
             <div class="news-content">
               <h3>Exalted Skin: Arcane Fractured Jinx</h3>
               <p>Three flavors of chaos all wrapped into one. Arcane Fractured Jinx is ready to save the day—or watch it
@@ -109,7 +118,7 @@
         </div>
         <div class="carousel-item-2">
           <div class="news-card">
-            <img src="assets/npc_2.jpg" alt="npc_2">
+            <img src="assets/npc_4.jpg" alt="npc_2">
             <div class="news-content">
               <h3>Exalted Skin: Arcane Fractured Jinx</h3>
               <p>Three flavors of chaos all wrapped into one. Arcane Fractured Jinx is ready to save the day—or watch it
@@ -134,36 +143,84 @@
     </div>
   </div>
 
+  <!-- 职业 -->
+  <div class="job-section">
+    <div class="job-header">
+      <h2> Job </h2>
+      <p> Choose your job start your adventure </p>
+    </div>
+    <div class="job-tabs">
+      <div class="tab active" data-role="jian">
+        <img src="assets/roles/jiantab.png" alt="Swordsman">
+        <span>Swordsman</span>
+      </div>
+      <div class="tab" data-role="ji">
+        <img src="assets/roles/jitab.png" alt="Mechanic">
+        <span>Mechanic</span>
+      </div>
+      <div class="tab" data-role="qiang">
+        <img src="assets/roles/qiangtab.png" alt="Gunner">
+        <span>Gunner</span>
+      </div>
+    </div>
+    <div class="job-roles">
+      <div class="role active" id="jian">
+        <img src="assets/roles/jian.png" alt="Swordsman角色">
+      </div>
+      <div class="role" id="ji">
+        <img src="assets/roles/ji.png" alt="Mechanic角色">
+      </div>
+      <div class="role" id="qiang">
+        <img src="assets/roles/qiang.png" alt="Gunner角色">
+      </div>
+    </div>
+  </div>
+
+  <!-- video -->
   <div class="icon-media-section">
+    <div class="icon-media-header">
+      <p> MULTIPLE WAYS TO </p>
+      <h2> PLAY </h2>
+    </div>
     <div class="icon-circle">
       <div class="icon-item-wrapper">
         <div class="icon-item active" data-video="a.mp4">
           <img src="assets/circle/a.png" alt="Icon A">
         </div>
-        <span>剑士</span>
+        <span>Swordsman</span>
       </div>
       <div class="icon-item-wrapper">
         <div class="icon-item" data-video="b.mp4">
           <img src="assets/circle/b.png" alt="Icon B">
         </div>
-        <span>机械师</span>
+        <span>Mechanic</span>
       </div>
       <div class="icon-item-wrapper">
         <div class="icon-item" data-video="c.mp4">
           <img src="assets/circle/c.png" alt="Icon C">
         </div>
-        <span>枪手</span>
+        <span>Gunner</span>
       </div>
     </div>
     <div class="video-container">
-      <video id="mediaVideo" autoplay loop muted playsinline>
-        <source src="assets/circle/a.mp4" type="video/mp4">
-      </video>
+      <div class="video-wrapper">
+        <video autoplay loop muted playsinline webkit-playsinline>
+          <source
+            src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/bbc27473157462adacf0de441a8796268eb2d0ac.mp4"
+            type="video/mp4">
+        </video>
+      </div>
+      <div class="glow-effect"></div>
     </div>
   </div>
 
+  <!-- NFT -->
   <div class="nft-section">
-    <h3>海量NFT时装</h3>
+    <div class="nft-header">
+      <h2> NFT </h2>
+      <p>MULTIPLE FASHTION</p>
+    </div>
+    <h3></h3>
     <div class="nft-row scroll-left">
       <div class="nft-container">
         <img src="assets/NFT_ICON/1.png" alt="NFT 1">
@@ -212,6 +269,7 @@
     </div>
   </div>
 
+  <!-- 底部 -->
   <footer class="footer">
     <div class="footer-logo">
       <img src="assets/icon.jpg" alt="Logo">
@@ -239,7 +297,7 @@
 
         <div class="footer-section flex1">
           <h4>About</h4>
-          <a href="#">About KiTon</a>
+          <a href="#">About YISA</a>
         </div>
       </div>
     </div>
