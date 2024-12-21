@@ -48,13 +48,14 @@
 
   <!--背景-->
   <div class="hero-section">
-    <video class="background-video" autoplay loop muted playsinline webkit-playsinline>
-      <source src="./assets/bg.mp4" type="video/mp4">
+    <video class="background-video" autoplay loop muted playsinline x5-video-player-type="h5" x5-playsinline="true"
+      webkit-playsinline="true">
+      <source src="assets/bg.mp4" type="video/mp4">
     </video>
     <div class="hero-content">
-      <img
-        src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/9eb028de391e65072d06e77f06d0955f66b9fa2c-736x316.png?auto=format&fit=fill&q=80&w=600"
-        alt="Game Logo" class="game-logo">
+      <!-- <img
+        src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/9eb028de391e65072d06e77f06d0955f66b9fa2c-736x316.png?auto=format&fit=fill&q=80&w=714"
+        alt="Game Logo" class="game-logo"> -->
       <a href="#" class="play-button">PLAY FOR FREE</a>
     </div>
   </div>
@@ -208,10 +209,9 @@
     </div>
     <div class="video-container">
       <div class="video-wrapper">
-        <video autoplay loop muted playsinline webkit-playsinline>
-          <source
-            src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/bbc27473157462adacf0de441a8796268eb2d0ac.mp4"
-            type="video/mp4">
+        <video id="mediaVideo" autoplay loop muted playsinline x5-video-player-type="h5" x5-playsinline="true"
+          webkit-playsinline="true">
+          <source src="assets/circle/b.mp4" type="video/mp4">
         </video>
       </div>
       <div class="glow-effect"></div>
