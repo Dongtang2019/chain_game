@@ -369,6 +369,7 @@
   max-width: 500px;
   height: auto;
   margin-bottom: 40px;
+  background-color: transparent;
 }
 
 .play-button {
