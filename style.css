@@ -575,15 +575,19 @@
 }
 
 .icon-item {
-  width: 60px;
-  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 15px;
   cursor: pointer;
-  margin: 0 20px;
+  margin: 0 10px;
   transition: all 0.3s ease;
-  margin-bottom: 6px;
   position: relative;
   border-radius: 16px;
   background-color: rgba(198, 168, 99, 0.15);
+  color: rgb(255, 255, 255, 0.3);
 }
 
 .icon-item img {
@@ -604,6 +608,7 @@
 
 .icon-item.active {
   background-color: white;
+  color: rgb(101, 138, 219);
 }
 
 .icon-item.active + span {
