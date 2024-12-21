@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     container.style.transform = `translateX(${translateX}%)`;
     updateButtons();
 
-    // 更新进度条
-    const progress = (currentIndex / (totalItems - 1)) * 100;
+    // 更新进度条 - 当是第一张时不显示进度
+    const progress = currentIndex === 0 ? 0 : (currentIndex / (totalItems - 1)) * 100;
     document.querySelector('.progress-bar-fill').style.width = `${progress}%`;
   };
 
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     container.style.transform = `translateX(${translateX}%)`;
     updateButtons();
 
-    // 更新进度条
-    const progress = (currentIndex / (totalItems - 1)) * 100;
+    // 更新进度条 - 当是第一张时不显示进度
+    const progress = currentIndex === 0 ? 0 : (currentIndex / (totalItems - 1)) * 100;
     document.querySelector('.progress-bar-fill-2').style.width = `${progress}%`;
   };
 
