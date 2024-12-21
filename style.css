@@ -336,8 +336,7 @@
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 580px;
-  /* background-color: rgb(10, 20, 40); */
+  min-height: 440px;
 }
 
 .background-video {
