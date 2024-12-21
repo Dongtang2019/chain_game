@@ -25,9 +25,9 @@
   color: white;
   font-size: 18px;
   font-weight: bold;
-  font-family: fantasy, sans-serif;
-  font-weight: 600;
-  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 4px;
 }
@@ -355,7 +355,7 @@
 
 .hero-content {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -432,6 +432,10 @@
   font-weight: 700;
   font-size: 24px;
   font-weight: bold;
+}
+.featured-header h2 span {
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .view-all {
@@ -551,7 +555,8 @@
   justify-content: center;
   padding: 40px 20px;
   gap: 40px;
-  background-color: rgb(10, 20, 40);
+  /* background-color: rgb(10, 20, 40); */
+  background: rgb(101, 138, 219);
 }
 
 .icon-circle {
@@ -592,7 +597,7 @@
 .icon-item.active img {
   width: 100%;
   height: 100%;
-  border: 2px solid rgba(198, 168, 99, 1);
+  border: 2px solid #f4a460;
   border-radius: 16px;
 }
 
@@ -611,7 +616,8 @@
 }
 
 .icon-item-wrapper {
-  color: rgba(198, 168, 99, 0.15);
+  /* color: rgba(198, 168, 99, 0.5); */
+  color: rgb(244, 164, 96, 0.3);
 }
 
 .icon-item.active::before {
