@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icon.jpg">
+  <title>YISAYA</title>
+  <link rel="stylesheet" href="root.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-brand-text">
+      <div class="nav-brand">
+        <img src="assets/icon.jpg" alt="Logo" class="nav-logo">
+      </div>
+      <span>YISAYA</span>
+    </div>
+
+    <div class="menu-icon">
+      <img src="assets/menu.svg" alt="Menu">
+    </div>
+  </nav>
+
+  <!--菜单-->
+  <div class="menu-container">
+    <div class="menu-header">
+      <div class="nav-brand-text">
+        <div class="nav-brand">
+          <img src="assets/icon.jpg" alt="Logo" class="nav-logo">
+        </div>
+        <!-- <span>Hunter Fight</span> -->
+      </div>
+      <div class="close-icon">
+        <img src="assets/close.svg" alt="Close">
+      </div>
+    </div>
+    <div class="menu-content">
+      <a href="#" class="menu-item">Home</a>
+      <div class="menu-buttons">
+        <a href="#" class="menu-button">Play on Web</a>
+        <a href="#" class="menu-button">Play on Telegram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="carouselDetail" id="carouselDetail">
+
+  </div>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <!-- <img src="assets/icon.jpg" alt="Logo"> -->
+      <img src="assets/bg_logo_2.png" alt="Game Logo" class="game-logo">
+      <p class="right">©2024 YISAYA All right reserved</p>
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-column">
+        <div class="footer-section flex2">
+          <h4>Games</h4>
+          <a href="#">Apply for Partnership</a>
+        </div>
+
+        <div class="footer-section flex1">
+          <h4>NFT</h4>
+          <a href="#">Collections</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <div class="footer-section flex2">
+          <h4>Community</h4>
+          <a href="#">Telegram</a>
+        </div>
+
+        <div class="footer-section flex1">
+          <h4>About</h4>
+          <a href="#">About YISA</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script src="script.js"></script>
+<script>
+  function getUrlParameter(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    // 获取 id 参数
+    const id = getUrlParameter('id');
+
+    const carouselDetail = document.getElementById('carouselDetail');
+
+    if (id) {
+      carouselDetail.textContent = id;
+    }
+  })
+</script>
+
+</html>

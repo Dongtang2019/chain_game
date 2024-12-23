@@ -1,3 +1,4 @@
+// 轮播图
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.carousel-container');
   const prevBtn = document.querySelector('.carousel-prev');
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// 轮播图2
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.carousel-container-2');
   const prevBtn = document.querySelector('.carousel-prev-2');
@@ -88,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
+// 菜单
 document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.querySelector('.menu-icon');
   const closeIcon = document.querySelector('.close-icon');
@@ -103,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// 视频
 document.addEventListener('DOMContentLoaded', () => {
   const icons = document.querySelectorAll('.icon-item');
   const video = document.getElementById('mediaVideo');
@@ -125,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// 角色切换
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.tab');
 
