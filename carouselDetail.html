@@ -87,22 +87,91 @@
 
 </body>
 
-<script src="script.js"></script>
+<script>
+  // 菜单
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
+    const menuContainer = document.querySelector('.menu-container');
+
+    menuIcon.addEventListener('click', function () {
+      menuContainer.classList.add('active');
+    });
+
+    closeIcon.addEventListener('click', function () {
+      menuContainer.classList.remove('active');
+    });
+  });
+</script>
 <script>
   function getUrlParameter(name) {
     const params = new URLSearchParams(window.location.search);
     return params.get(name);
   }
-  document.addEventListener('DOMContentLoaded', () => {
-    // 获取 id 参数
-    const id = getUrlParameter('id');
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const id = getUrlParameter('id');
     const carouselDetail = document.getElementById('carouselDetail');
 
-    if (id) {
-      carouselDetail.textContent = id;
+    const contents = {
+      '4': {
+        image: 'assets/npc_4.jpg',
+        title: 'DriveCore社区驱动系统',
+        content: `
+          <p>以赛亚首家推出的DriveCore驱动系统，重新定义了区块链游戏中玩家与工会的关系。通过该系统，每位玩家加入工会后，战力将显著提升，而工会主则能够通过集结更多成员，获得来自每一位成员的战力加成。这种设计不仅强化了个体与集体的成长，还让工会成为游戏生态系统中的核心力量，推动其繁荣。
+这种创新机制通过公平的激励模式，为玩家提供了一个互利的社区环境，进一步推动了工会文化的发展。DriveCore系统不仅让玩家间的合作变得更具价值，同时也带来了一个真正去中心化的、合作共赢的区块链游戏新纪元。
+</p>
+          <p>以塞亚驱动：引领链游工作室大规模崛起
+以赛亚通过其创新的DriveCore驱动系统，致力于帮助链游工作室实现发展和普及。这一系统不仅为玩家提供了更具吸引力的游戏体验，同时也为游戏工作室创造了可持续的生态环境。通过激励玩家积极参与和协作，DriveCore系统推动了工会文化的普及，从而增强了玩家的忠诚度与社区活力。
+借助这一驱动力系统，链游工作室将能够更高效地吸引和留住大量用户，推动用户群体的大规模突破。这种机制为工作室提供了强大的增长工具，使其在区块链游戏市场中获得更广泛的覆盖，最终实现链游工作室的普遍化和市场领先地位。
+</p>`
+      },
+      '1': {
+        image: 'assets/npc_1.jpg',
+        title: '代币经济模型（总量10亿枚）',
+        content: `
+          <p>ISA代币经济：精准发行，确保长期可持续性</p>
+          <p>95%代币通过销毁池发行：所有代币的发行都依托于智能合约控制的销毁池机制，根据市场需求动态调整发行量。玩家代币进入游戏销毁80%的代币，系统根据销毁池总量精准发行0.8%-1.5%的新代币，保障代币的稀缺性和市场供需平衡，杜绝滥发。</p>
+          <p>玩家主导的代币销毁机制：玩家进入游戏时，80%的代币将被销毁。这个过程推动了代币的循环发行，确保真正为游戏生态贡献的玩家能够影响代币供应，建立了公平透明的用户驱动型经济体系。</p>
+          <p>无私募，无预挖：所有代币通过公开市场和游戏内发行，所有玩家都站在同一起跑线。项目没有私募或预挖，代币流通完全依赖市场和玩家的真实行为，充分体现去中心化理念。</p>
+        `
+      },
+      '2': {
+        image: 'assets/npc_2.jpg',
+        title: '每日代币分配规则',
+        content: `
+          <p>根据游戏玩家战斗值加权分配当天发行代币（公会主能够得到整体公会游戏玩家10%战斗力加成，直接邀请人能得到游戏玩家15%战斗力加成）。</p>
+          <p>游戏玩家需要从交易所购买代币充值到平台，购买装备，升级强化装备，购买门票等。所有玩家在游戏中消耗的代币：80%直接打入销毁池，10%游戏开发运营，5%公会排行榜奖励（前20名公会即可获得每天消耗代币的奖励，激励公会与公会之间形成竞争达到二次氪金效应），2%个人排行榜奖励（前20名个人战力值获得奖励，激励更多氪金玩家冲榜，促使高氪金玩家基数增加），3%项目基金储备(打造平台合作，生态建设)。</p>
+</p>      `
+      },
+      '3': {
+        image: 'assets/npc_3.jpg',
+        title: 'NFT发行与经济模型',
+        content: `
+          <p>NFT穿戴与高级副本：开创玩家主导的链游经济</p>
+          <p>以赛亚打破传统项目方控制NFT发行的模式，将NFT获取的权力完全交给玩家，通过游戏行为创造和分发新NFT：</p>
+          <p>首发3000套初始NFT：初始NFT不仅是进入游戏的门票，还拥有稀缺性和增值潜力。持有者能够进入高级副本，并通过战斗打出后续玩家所需的NFT，形成早期参与者的独特收益渠道。</p>
+          <p>玩家主导的NFT生成：后续新玩家所需的NFT均由初始NFT持有者通过高级副本获取，建立了一个由玩家推动的健康市场，避免了NFT的市场投机和供应失衡问题。</p>
+          <p>这种NFT机制确保了NFT供应的动态调节，同时为早期持有者带来了持续收益机会</p>
+        `
+      }
+    };
+
+    if (id && contents[id]) {
+      const content = contents[id];
+      carouselDetail.innerHTML = `
+        <div class="detail-container">
+          <img src="${content.image}" alt="Detail Image" class="detail-image">
+          <div class="detail-content">
+            <h2>${content.title}</h2>
+            <div class="detail-text">
+              ${content.content}
+            </div>
+          </div>
+        </div>
+      `;
     }
-  })
+  });
 </script>
 
 </html>
