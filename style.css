@@ -823,6 +823,9 @@
 
 .detail-content {
   padding: 20px 0;
+  /* background-image: url("assets/featured_bg.png");
+  background-size: cover;
+  background-position: center; */
 }
 
 .detail-content h2 {
